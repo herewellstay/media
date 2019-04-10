@@ -2,18 +2,34 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
         maven { url "https://jitpack.io" }
 
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
-apply plugin: 'com.android.library'
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
 
+    }
+}
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.herewellstay'
+version = '1.0.0'
 android {
     compileSdkVersion 28
 
@@ -43,7 +59,7 @@ android {
 }
 
 dependencies {
-    //implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
