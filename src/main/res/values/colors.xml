@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hwsMediaPlaylistSelectorColor">#00ffff</color>
+    <color name="hwsMediaVideoColor">#000000</color>
+    <color name="hwsMediaVideoColorTransparent">#CC000000</color>
+    <color name="hwsMediaPlaylistColor">#000000</color>
+    <color name="hwsMediaVideoBackgroundColor">#B0000000</color>
+</resources>
