@@ -95,6 +95,7 @@ public class VideoActivity extends AppCompatActivity {
         exoName =findViewById(R.id.exoPlayerVideoName);
         exoName.setText(getPlaylist().current().getName());
         View playlistBannerView = getPlaylistBannerView();
+       playerView.setKeepScreenOn(true);
         if(playlistBannerView!=null){
             playlistBanner.addView(playlistBannerView);
         }
